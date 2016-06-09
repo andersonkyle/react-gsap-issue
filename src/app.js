@@ -30,7 +30,7 @@ export default class App extends React.Component {
         this.setState({component: nextComponent});
     }
 
-    renderIngestTable(){
+    renderMovieTable(){
         return (
             <MovieTable handleClick={this.handleClick}/>
         );
@@ -47,7 +47,7 @@ export default class App extends React.Component {
             <div className="container" style={{position: "relative"}}>
                 <h1>Movie App</h1>
                 <TransitionGroup>
-                    {this.state.component === "movieTable" ? this.renderIngestTable() : null}
+                    {this.state.component === "movieTable" ? this.renderMovieTable() : null}
                     {this.state.component === "videoPlayer" ? this.renderVideoPlayer() : null}
                 </TransitionGroup>
             </div>);
